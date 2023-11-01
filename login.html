@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="cadastro.js">
+    <title> Login </title>
+    <link rel="icon" href="img/nova.png" />
+</head>
+
+<body>
+    <nav>
+
+        <div class="logo">
+            <br>
+            <a href="inicio.html"> <img src="img/nova.png" height="80px" width="80px">
+        </div> </a>
+        </div>
+
+        <ul>
+            <li> <a href="inicio.html"> Início  </a> </li>
+            <li> <a href="login.html"> Login  </a> </li>
+            <li> <a href="ENEM.php"> ENEM </a> </li>
+            <li> <a href="tópicos.php"> Tópicos </a> </li>
+            <li> <a href="sair.php"> Sair </a> </li>
+            
+
+        </ul>
+    </nav>
+    <div class="box">
+        <div class="form-box">
+            <h2> Login</h2><br>
+            <form action="login.php" method="post">
+               
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <span class="error" aria-live="polite"></span>
+                    <input type="email" placeholder="Digite o seu email" name="email">
+                </div>
+
+                <div class="input-group ">
+                    <label for="senha">Senha </label>
+                    <input type="password" placeholder="Digite sua senha" required name="senha">
+                </div>
+            
+            <p style="text-align: center;"> Não possui login? <a href="cadastro.html"> Cadastre-se </a> </p> <br>
+                <div class="input-group">
+                    <button value="submit" name="submit"> Login </button>
+                </div>
+                
+
+
+        </div>
+    </div>
+</body>
+
+</html>

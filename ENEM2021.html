@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ENEM.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" type='text/css'>
+    <title>ENEM 2021</title>
+    <link rel="icon" href="img/nova.png"/>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><br>
+            <a href="inicio.html"><img src="img/nova.png" height="80px" width="80px"></a>
+        </div>
+        <ul>
+            <li><a href="inicio.html">Início</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="ENEM.php">ENEM</a></li>
+            <li><a href="tópicos.php">Tópicos</a></li>
+            <li> <a href="sair.php"> Sair </a> </li>
+        </ul>
+    </nav>
+
+    <body>
+        <h1>Provas Passadas</h1><br>
+        <div class="nav2">
+            <ul>
+                <li><a href="ENEM2019.html">ENEM 2019</a></li>
+                <li><a href="ENEM2020.html">ENEM 2020</a></li>
+                <li><a href="ENEM2021.html">ENEM 2021</a></li>
+                <li><a href="ENEM2022.html">ENEM 2022</a></li>
+            </ul>
+        </div>
+        <div class="faq-container">
+            <details>
+                <summary>
+                    <span class="faq-title">
+                        <h2>Questão 136</h2>
+                    </span>
+                    <img src="icones/plus.svg" class="expand-icon" alt="Plus">
+                </summary>
+                <div class="faq-content">
+                    A bula de um antibiótico infantil, fabricado na
+                    forma de xarope, recomenda que sejam ministrados,
+                    diariamente, no máximo 500 mg desse medicamento
+                    para cada quilograma de massa do paciente. Um pediatra
+                    prescreveu a dosagem máxima desse antibiótico para
+                    ser ministrada diariamente a uma criança de 20 kg pelo
+                    período de 5 dias. Esse medicamento pode ser comprado
+                    em frascos de 10 mL, 50 mL, 100 mL, 250 mL e 500 mL.
+                    Os pais dessa criança decidiram comprar a quantidade
+                    exata de medicamento que precisará ser ministrada no
+                    tratamento, evitando a sobra de medicamento. Considere
+                    que 1 g desse medicamento ocupe um volume de 1 cm³.<br>
+                    A capacidade do frasco, em mililitro, que esses pais
+                    deverão comprar é <br><br>
+
+                    A) <a href="#" class="alternativa" id="alternativaA">10</a>.<br>
+                    B) <a href="#" class="alternativa" id="alternativaB">50</a>.<br>
+                    C) <a href="#" class="alternativa" id="alternativaC">100</a>.<br>
+                    D) <a href="#" class="alternativa" id="alternativaD">250</a>.<br>
+                    E) <a href="#" class="alternativa" id="alternativaE">500</a>.<br>
+                </div>
+            </details>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const alternativaB = document.getElementById("alternativaB");
+
+                alternativaB.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    
+                    // Verifique se a alternativa B foi clicada, que é a resposta correta
+                    const respostaCorreta = true; // A alternativa B é a correta
+                    
+                    if (respostaCorreta) {
+                        alert("Alternativa correta! Aqui está a resolução:\n\nA criança possui 20 kg e a dose diária máxima é de 0,5 gramas (500 mg) por quilo de massa do paciente.\n20 . 0,5 = 10 gramas por dia\nA questão informa que o pediatra prescreveu o remédio por 5 dias:\n5 . 10 = 50 gramas\nConsiderando que 1 g desse medicamento ocupa um volume de 1 cm³, é fácil concluir que 50 gramas ocuparão um volume de 50 cm³.");
+                    } else {
+                        alert("Alternativa incorreta.");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

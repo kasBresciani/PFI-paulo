@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #470e92;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Estilos para títulos */
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Estilos para a barra de navegação */
+nav {
+    background-color: #470e92;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 30px;
+}
+
+nav li {
+    margin-left: 7px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Estilos para perguntas frequentes (FAQ) */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5em;
+}
+
+details {
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    background: #d7e4e4;
+    border-radius: 8px;
+    position: relative;
+    max-width: 1000px;
+    border: 1px solid #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+details:hover {
+    border: 1px solid #1d15fc;
+}
+
+summary {
+    user-select: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: center;
+}
+
+summary:hover .faq-title {
+    opacity: 1;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:focus {
+    outline: none;
+}
+
+summary:hover .expand-icon {
+    opacity: 1;
+}
+
+.faq-title {
+    color: #000000;
+    width: 90%;
+    opacity: 0.65;
+    transition: all 250ms ease-in-out;
+}
+
+.faq-content {
+    color: #000000;
+    padding: 0.2em 1em 1em 1em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.expand-icon {
+    opacity: 0.65;
+}
+
+.expand-icon {
+    pointer-events: none;
+    position: absolute;
+    right: 1em;
+    transition: all 150ms ease-out;
+}
+
+/* Estilos para a segunda barra de navegação (nav2) */
+.nav2 {
+    background-color: #470e92;
+    border-top: 1px solid #0056b3;
+    border-bottom: 1px solid #0056b3;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.nav2 ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 30px;
+}
+
+.nav2 li {
+    margin-left: 7px;
+    justify-content: center;
+}
+
+.nav2 li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav2 li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Estilos para telas menores (até 768px) */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        margin-top: 20px;
+    }
+
+    ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .faq-container {
+        margin-top: 2em;
+    }
+
+    summary {
+        padding: 0.8em;
+    }
+
+    .faq-title {
+        width: 80%;
+    }
+}
+
+/* Estilos para telas muito pequenas (até 480px) */
+@media screen and (max-width: 480px) {
+    summary {
+        padding: 0.7em;
+    }
+
+    .faq-title {
+        width: 70%;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #470e92;
+}
+nav{
+    background-color: #470e92;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 30px;
+}
+nav li{
+    margin-left: 7px;
+}
+nav li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+nav li a:hover{
+    background-color: white;
+    color: black;
+}
+
+/* firefox 19+ */
+  input::-moz-placeholder {
+    font-size:12px;
+  }
+  
+  
+  @media (max-width: 425px) {
+    .box {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    
+
+    p {
+        font-size: 14px;
+    }
+
+    .input-group {
+        margin-top: 10px;
+    }
+}
+
+.texto .titulo{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+.sub_titulo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+
+
+

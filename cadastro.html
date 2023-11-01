@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    
+    
+    <title> Cadastro </title>
+    <link rel="icon" href="img/nova.png" />
+    <style>
+       
+       .erro {
+    font-size: 12px;
+    color: rgba(255, 0, 0, 0.623);
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <br>
+            <a href="inicio.html"> <img src="img/nova.png" height="80px" width="80px">
+        </div>
+        <ul>
+            <li> <a href="inicio.html"> Início </a> </li>
+            <li> <a href="login.html"> Login </a> </li>
+            <li> <a href="ENEM.php"> ENEM </a> </li>
+            <li> <a href="tópicos.php"> Tópicos </a> </li>
+            <li> <a href="sair.php"> Sair </a> </li>
+        </ul>
+    </nav>
+
+    <div class="box">
+        <div class="form-box">
+            <h2> Criar Conta </h2><br>
+            <form action="cadastrar.php" method="post">
+                <div class="input-group">
+                    <label for="nome"> Nome Completo </label>
+                    <input type="text" placeholder="Digite o seu nome completo" required minlength="8" name="nome">
+                    <span class="erro" aria-live="polite" id="nome-erro"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" placeholder="Digite o seu email" name="email" required>
+                    <span class="erro" aria-live="polite" id="email-erro"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" placeholder="Digite sua senha" required name="senha" id="senha">
+                    <span class="erro" aria-live="polite" id="senha-erro"></span>
+                    </span> <p>Já possui cadastro? <a href="login.html"> Login </a> </p><br>
+
+                    <div class="input-group">
+                        <button value="submit" name="enviar"> Cadastrar </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>document.addEventListener('DOMContentLoaded', function () {
+            const formulario = document.querySelector('form');
+            const nomeInput = formulario.querySelector('input[name="nome"]');
+            const emailInput = formulario.querySelector('input[name="email"]');
+            const senhaInput = formulario.querySelector('input[name="senha"]');
+            const nomeErro = formulario.querySelector('#nome-erro');
+            const emailErro = formulario.querySelector('#email-erro');
+            const senhaErro = formulario.querySelector('#senha-erro');
+            const iconeOlho = document.getElementById('icone-olho');
+            const senha = document.getElementById('senha');
+        
+            formulario.addEventListener('submit', function (e) {
+                let nome = nomeInput.value;
+                let email = emailInput.value;
+                let senha = senhaInput.value;
+        
+                nomeErro.textContent = '';
+                emailErro.textContent = '';
+                senhaErro.textContent = '';
+        
+                if (!EmailValido(email)) {
+                    e.preventDefault();
+                    emailErro.textContent = "Email inválido. Deve ser '@gmail.com', '@ifpr.edu.br', '@gov.br' ou '@hotmail.com'.";
+                    return;
+                }
+        
+                if (!SenhaValida(senha)) {
+                    e.preventDefault();
+                    senhaErro.textContent = "Senha inválida. Deve ter entre 9 e 32 caracteres, pelo menos uma letra maiúscula, um símbolo e um número.";
+                    return;
+                }
+            });
+        
+            function EmailValido(email) {
+                const dominiosValidos = ['@gmail.com', '@ifpr.edu.br', '@gov.br', '@hotmail.com'];
+                return dominiosValidos.some(function (dominio) {
+                    return email.endsWith(dominio);
+                });
+            }
+        
+            function SenhaValida(senha) {
+                return /^(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=.*[0-9]).{9,32}$/.test(senha);
+            }
+        }); </script>
+
+</body>
+
+</html>
